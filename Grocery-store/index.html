@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="style.css">
+<title>Grocery Store</title>
+    <!-- Add any additional CSS styles if needed -->
+    <script>
+        var udata=localStorage.getItem('uinfo');
+        var user=JSON.parse(udata);
+        //alert(user[0]);
+      </script>
+      <script type="text/javascript" src="logout.js"></script>
+    <style>
+        /* Add your custom styles here */
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+            font-family: 'Lobster', cursive;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+.eGrocery-store{
+    font-size: 2rem;
+    color: black;
+}
+.eGrocery-store:hover{
+    color: black;
+}
+.nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: black;
+}
+.search{
+    padding: 1rem;
+    height: 40px;
+    width:70%;
+    border-radius: 60px;
+    outline: none;
+    border: 2px solid rgb(248, 26, 92);
+}
+.btn0{
+    height: 40px;
+    width: 25%;
+    outline: none;
+    border: none;
+    background: rgb(248, 26, 92);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+.icons div{
+    border: 0px solid;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: red;
+    font-size: 1.5rem;
+    margin-right: .3rem;
+    text-align: center;
+    cursor: pointer;
+}
+.icons div:hover{
+    background: red;
+    color: white;
+}
+.button{
+    font-size: 1rem;
+    font-weight: 1;
+    border: 0;
+    border-radius: .5rem;
+    color: red;
+}
+.home{
+    border-radius: .5rem;
+    background: url(https://img.freepik.com/premium-photo/home-delivery-food-purchase-via-internet-your-smartphone-other-gadget_489646-21488.jpg?w=900)no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: 50%;
+    width: 100%;
+}
+.home h1{
+    font-size: 7rem;
+    font-weight: 100;
+}
+.home p{
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+.btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26, 92);
+    color: white;
+    font-weight: 70;
+    border-radius: 60px;
+}
+.btn2{
+    height: 45px;
+    width: 60%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26, 92);
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+}
+.features{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+    color: black;
+}
+.features span{
+    background: rgb(248, 26, 92);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+}
+.features div div h3{
+    font-family: 'Lobster',cursive;
+}
+.features div div p{
+    font-size: 1.5rem;
+}
+.features div div a{
+    border: 2px solid;
+    background: rgb(248, 26, 92);
+    color: #fff;
+    padding: .2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+.features .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: .5rem;
+}
+.features .box-container .box{
+    padding: 3rem 2rem;
+    background: #eee;
+    border-radius: .5rem;
+    outline-offset: -1rem;
+    text-align: center;
+}
+.products{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+    color: black;
+}
+.products span{
+    background: rgb(248, 26, 92);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+}
+.products div div h3{
+    font-family: 'Lobster',cursive;
+}
+.products div div h4 div{
+    font-size: 1.5rem;
+}
+.products div div h5 div{
+    font-size: 1rem;
+}
+.products div div a{
+    border: 2px solid;
+    background: rgb(248, 26, 92);
+    color: #fff;
+    padding: .2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: .5rem;
+}
+.products .box-container .box{
+    padding: 3rem 2rem;
+    border: .2rem solid rgb(248, 26, 92);
+    border-radius: .5rem;
+    outline-offset: -1rem;
+    text-align: center;
+}
+.Categories{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+    color: black;
+}
+.Categories span{
+    background: rgb(248, 26, 92);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+}
+.Categories div div h3{
+    font-family: 'Lobster',cursive;
+}
+.Categories div div p{
+    font-size: 1.5rem;
+}
+.Categories div div a{
+    border: 2px solid;
+    background: rgb(248, 26, 92);
+    color: #fff;
+    padding: .2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+.Categories .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1.5rem;
+}
+.Categories .box-container .box{
+    padding: 3rem 2rem;
+    background: #eee;
+    border-radius: .5rem;
+    outline-offset: -1rem;
+    text-align: center;
+}
+.review{
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+    color: black;
+}
+.review span{
+    background: rgb(248, 26, 92);
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 5rem;
+}
+.review div div h3{
+    font-family: 'Lobster',cursive;
+}
+.review div div p{
+    font-size: 1rem;
+}
+.review div div .stars{
+    font-size: 1rem;
+}
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(45rem,1fr));
+    gap: 1rem;
+}
+.review .box-container .box{
+    padding: 3rem 2rem;
+    background: orange;
+    border-radius: .5rem;
+    outline-offset: -1rem;
+    text-align: center;
+}
+.btn4{
+    height: 45px;
+    width: 20%;
+    border: none;
+    outline: none;
+    background-color: rgb(248, 26, 92);
+    color: white;
+    font-weight: 10;
+    border-radius: 60px;
+}
+.stars i {
+            color: red;
+        }
+        .footer {
+            background-color: #eee;
+            border-radius: 1rem;
+            padding: 50px 0;
+            font-size: 1.2rem;
+            font-family: 'Lobster', cursive;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .box {
+            text-align: center;
+            margin-bottom: 30px;
+            flex: 0 0 48%; /* Adjust the width for larger screens */
+        }
+
+        .box h3 {
+            margin-bottom: 20px;
+        }
+
+        .share a {
+            margin: 0 10px;
+            color: #007bff;
+        }
+
+        .link {
+            display: block;
+            margin-bottom: 10px;
+            color: #343a40;
+        }
+
+        .email {
+            margin-top: 20px;
+        }
+
+        .email input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .btn4 {
+            width: 100%;
+        }
+
+        .payment-img {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+
+        .credit {
+            margin-top: 30px;
+            text-align: center;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <a class="eGrocery-store navbar-brand" href="#">eG store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://moviesandtv.myvi.in/">Tv shows</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Categories">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#review">Review</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="mr-sm-2 form-control search" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+
+        <div class="icons">
+            <div class="fa fa-search" id="search-btn"></div>
+            <button class="button" onclick="logOut()"><div class="fa fa-user" id="User-btn"></div><script>document.write(user[0])</script></button>
+        </div>
+    </nav>
+
+    <section class="home" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h1><br>Online Grocery Store</h1><br>
+                    <p>Fresh and Organic products for you.....</p>
+                    <button class="btn1">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h1 class="features">Our <span>Features</span></h1>
+        <div class="box-container">
+          <div class="box">
+            <br><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgJPKRHkIAaE8H_eGMN1t59kvFzs-vmCIPbQ&usqp=CAU" class="img-fluid" alt="">
+            <h3><br>Fresh and Organic</h3>
+            <p>We provide Fresh and Organic grocery items that will make your life easy by delivering.</p>
+            <br><a href="#" class="btn3">Read more</a>
+          </div>
+    
+          <div class="box">
+            <img src="https://img.freepik.com/free-vector/fast-free-delivery-logo-with-delivery-van-truck_1308-46374.jpg?w=900&t=st=1704893246~exp=1704893846~hmac=fff240cc8bf90963b7fd49655acd98d4d6252759c0137d9102fb03be8bee5a1f" class="img-fluid" alt="">
+            <h3><br>Fast and Free Delivery</h3>
+            <p>We also offer free delivery and easy returns and exchanges.</p>
+            <a href="#" class="btn3">Read more</a>
+          </div>
+    
+          <div class="box">
+            <img src="https://www.nasdaq.com/sites/acquia.prod/files/styles/1370x700/public/gobankingrates/woman-in-kitchen-ordering-on-phone_iStock-1272443174.jpg?1704542326960290853" class="img-fluid" alt="">
+            <h3><br>Easy Payments</h3>
+            <p>And also We Provide online Payments for easy for your shopping.</p>
+            <br><a href="#" class="btn3">Read more</a>
+          </div>
+        </div>
+        </section>
+
+        <section class="products" id="products">
+            <h1 class="products">Our <span>Products</span></h1>
+            <div class="box-container">
+              <div class="box">
+                <img src="https://www.bigbasket.com/media/uploads/p/l/40001001_23-maaza-juice-mango.jpg?tr=w-640,q=80" class="img-fluid" alt="">
+                <h3>Maaza Mango drink 1.5L</h3>
+                <h4><div class="price">Rs-80</div></h4>
+                <h5><div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt">15,657</i>
+                </div></h5>
+                <a href="Add_to_cart.html" class="btn3">Add to Cart</a>
+              </div>
+              
+              <div class="box">
+                <img src="https://www.rangolimart.com/wp-content/uploads/2021/05/red-onion.jpg" class="img-fluid" alt="">
+                <h3><br>Fresh Onion</h3>
+                <h4><div class="price">Rs-35</div></h4>
+                <h5><div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt">15,234</i>
+                </div></h5>
+                <a href="Add_to_cart.html" class="btn3">Add to Cart</a>
+              </div>
+        
+              <div class="box">
+                <img src="https://4.imimg.com/data4/XC/PG/MY-35144332/cabbage-500x500.jpg" class="img-fluid" alt="">
+              <h3><br>Fresh cabbage</h3>
+                <h4><div class="price">Rs-30</div></h4>
+                <h5><div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt">15,789</i>
+                </div></h5>
+                <a href="Add_to_cart.html" class="btn3">Add to Cart</a>
+              </div>
+        
+              <div class="box">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTpNQIm3ErKhMaBbQ5_KKkVJbcPsT-rs97Y6au5i1se6SJUTqJ2bUfjYQZ8Fwlk6An_6v3uf2UW9mgNgBVNUXBHTg9YNRXY-1uYyl43oYUOac4H22MHBuf2KcrOLVA5y27Ti1EiS5Ufmw&usqp=CAc" class="img-fluid" alt="">
+              <h3>Surf Excel Easy wash Detergent Powder 1.5kg</h3>
+                <h4><div class="price">Rs-230</div></h4>
+                <h5><div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt">17,657</i>
+                </div></h5>
+                <a href="Add_to_cart.html" class="btn3">Add to Cart</a>
+              </div>
+        
+              <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcThRtD4TD3WAmN7u4kZt-o0c8P--k5TevkGiDgeNfeif7pIY2_VWyr9wLke-v3-udSjYJ4gbRZTs80Z0X-ILytixB5sNBkSjiZGCIOF0KTXuRzIKfBSmot34ndumu4AnLR65q-p6Lw&usqp=CAc" class="img-fluid" alt="">
+              <h3>Gold winner Urad dal 500gm</h3>
+                <h4><div class="price">Rs-146.70</div></h4>
+                <h5><div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt">16,657</i>
+                </div></h5>
+                <a href="Add_to_cart.html" class="btn3">Add to Cart</a>
+              </div>
+        
+              <div class="box">
+                <img src="https://m.media-amazon.com/images/I/41ZMscGXt7L._SX300_SY300_QL70_FMwebp_.jpg" class="img-fluid" alt="">
+              <h3><br>Tata Salt 1kg</h3>
+                <h4><div class="price">Rs-28</div></h4>
+                <h5><div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt">16,657</i>
+                </div></h5>
+                <a href="Add_to_cart.html" class="btn3">Add to Cart</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="Categories" id="Categories">
+            <h1 class="Categories"> Product <span>Categories</span></h1>
+            <div class="box-container">
+              <div class="box">
+                <img src="https://media.istockphoto.com/id/160356158/photo/fruits-and-veggies-in-wood-box-with-white-backdrop.jpg?s=2048x2048&w=is&k=20&c=Dum3NmeJEeJ8nUxaygG-AmZAABe_a7KXhEIOmEUNLHs=" class="img-fluid" alt="">
+                <h3><br>Vegetables</h3>
+                <p>upto 45% off</p>
+                <a href="vegetables.html" class="btn3">Shop now</a>
+              </div>
+        
+              <div class="box">
+                <img src="https://media.istockphoto.com/id/182810893/photo/fruit-mix.jpg?s=2048x2048&w=is&k=20&c=DpqhNcQzSqrRDJTPH43F_Bu36TTjUXB1AUCMLwhu-kY=" class="img-fluid" alt="">
+                <h3><br>Fresh fruits</h3>
+                <p>upto 45% off</p>
+                <a href="#" class="btn3">Shop now</a>
+              </div>
+        
+              <div class="box">
+                <img src="https://media.istockphoto.com/id/544807136/photo/various-fresh-dairy-products.jpg?s=2048x2048&w=is&k=20&c=wW8se0Lrt6cF6Uc8fvVWw579E-MweuaUUaRPz0FB7fc=" class="img-fluid" alt="">
+                <h3><br>Dairy Prooducts</h3>
+                <p>upto 45% off</p>
+                <a href="#" class="btn3">Shop now</a>
+              </div>
+        
+              <div class="box">
+                <img src="https://media.istockphoto.com/id/168246602/photo/raw-cuts-of-pork-meat-on-a-wooden-chopping-board.jpg?s=2048x2048&w=is&k=20&c=QOsZTLyZQ3RszO_9dKLF4N33sCbjmcL8svC5czm7aDs=" class="img-fluid" alt="">
+                <h3><br>Fresh Meat</h3>
+                <p>upto 45% off</p>
+                <a href="#" class="btn3">Shop now</a>
+              </div>
+            </div>
+          </section>
+
+          <section class="review" id="review">
+            <h1 class="review">Customer's <span>Reviews</span></h1>
+            <div class="container">
+                <div class="row">
+                    <div class="box col-md-6 col-lg-4">
+                        <img src="https://user-images.trustpilot.com/6479fed082dd700012c4df70/73x73.png" class="img-fluid" alt="">
+                        <h3>emine balkur</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <p>Items arrived quickly and well packaged according to the cold chain. Everything was good...</p>
+                        </div>
+                    </div>
+    
+                    <div class="box col-md-6 col-lg-4">
+                        <img src="https://user-images.trustpilot.com/54f180710000ff0001ae1661/73x73.png" class="img-fluid" alt="">
+                        <h3>Steve</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <p>All delivered on time and in good condition...</p>
+                        </div>
+                    </div>
+    
+                    <div class="box col-md-6 col-lg-4">
+                        <img src="https://user-images.trustpilot.com/656556d0e32eb5001117b5a2/73x73.png" class="img-fluid" alt="">
+                        <h3>Mert B.</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <p>Fast and nicely packed shipping...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="box col-md-6 col-lg-3">
+                        <h3>Grocery <i class="fas fa-shopping-basket"></i></h3>
+                        <p>Fresh and Organic products for you.....</p>
+                        <div class="share">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+                    </div>
+    
+                    <div class="box col-md-6 col-lg-3">
+                        <h3>Contact Info</h3>
+                        <a href="#" class="link"><i class="fas fa-phone"></i>+123-456-789</a>
+                        <a href="#" class="link"><i class="fas fa-phone"></i>+123-456-789</a>
+                        <a href="#" class="link"><i class="fas fa-envelope"></i>egrocery@gmail.com</a>
+                        <a href="#" class="link"><i class="fas fa-map-marker-alt"></i>Kolkata, India-700001</a>
+                    </div>
+    
+                    <div class="box col-md-6 col-lg-3">
+                        <h3>Quick Links</h3>
+                        <a href="#home" class="link"><i class="fas fa-arrow-right"></i>Home</a>
+                        <a href="#features" class="link"><i class="fas fa-arrow-right"></i>Features</a>
+                        <a href="https://moviesandtv.myvi.in/" class="link"><i class="fas fa-arrow-right"></i>Tv shows</a>
+                        <a href="#products" class="link"><i class="fas fa-arrow-right"></i>Products</a>
+                        <a href="#Categories" class="link"><i class="fas fa-arrow-right"></i>Categories</a>
+                        <a href="#review" class="link"><i class="fas fa-arrow-right"></i>Review</a>
+                    </div>
+    
+                    <div class="box col-md-6 col-lg-3">
+                        <form action="#" class="email">
+                            <h3>Subscribe by Email</h3>
+                            <p>Subscribe for the latest updates</p>
+                            <input type="email" placeholder="Your email..." class="email">
+                            <input type="submit" value="Subscribe" class="btn4">
+                            <img src="https://content.invisioncic.com/p289038/monthly_2022_10/Payment-methods.png.2b9ba23475aaa15189f555f77ec3a549.png" class="img-fluid"
+                                class="payment-img">
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-12">
+                        <div class="credit">Created by <span>mr. eGrocery-store Web designer</span> | all rights reserved</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Include Bootstrap JS and any additional JS scripts if needed -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
